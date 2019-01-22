@@ -16,6 +16,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  opacity: 0.8
 }
 
 .header-menu {
@@ -144,14 +145,16 @@
   justify-content: end;
   transition: opacity 0.5s;
 
+
   &.active {
-    z-index: 1;
+    z-index: 2;
     opacity: 1;
   }
 }
 
 .header-navbar_item {
   a {
+    opacity: 1;
     display: block;
     padding: 20px;
     transition: color 0.5s;
@@ -159,7 +162,6 @@
     :hover {
       color: #d66926;
     }
-  
 }
 
 .header-content {
