@@ -1,0 +1,61 @@
+.posts {
+  .container {
+    grid-gap: 20px;
+  }
+}
+
+.posts-item {
+  transition: background-color 0.5s;
+  background-color: #f2f2f2;
+
+  a {
+    display: grid;
+    overflow: hidden;
+    height: 100%;
+    grid-template-rows: 300px 1fr;
+  }
+
+  &_image {
+    position: relative;
+    overflow: hidden;
+
+    div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: transform 0.5s;
+      background-color: #2d3651;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+  }
+
+  &_caption {
+    display: grid;
+    padding: 20px;
+    align-content: center;
+
+    h3 {
+      transition: color 0.5s;
+      text-align: center;
+    }
+  }
+
+  :hover {
+    background-color: #d8d8d8;
+
+    .posts-item_image div {
+      transform: scale(1.1);
+    }
+
+    h3 {
+      color: #2d3651;
+    }
+
+    p {
+      color: #2d3651;
+    }
+  }
+}

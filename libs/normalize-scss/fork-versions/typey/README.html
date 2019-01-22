@@ -1,0 +1,54 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="fork-able-normalize-scss-br-for-typey">Fork-able normalize-scss<br> for Typey</h1>
+<h2 id="using-with-node-sass">Using with node-sass</h2>
+<ol>
+<li>Copy these files to your Sass project.</li>
+<li><p>This fork-able version requires the <a href="https://github.com/jptaranto/typey">typey</a> Sass module. Add it to your package.json with:</p>
+<pre><code class="lang-bash">npm install --save-dev typey
+</code></pre>
+</li>
+<li><p>Add Typey&#39;s Sass directory to your nodeSass&#39; <a href="https://github.com/sass/node-sass#includepaths"><code>includePaths</code> option</a>.</p>
+<p><code>`</code>js
+var sass = require(&#39;node-sass&#39;),
+path = require(&#39;path&#39;);</p>
+</li>
+</ol>
+<p>sass.render({
+  file: scss_filename,
+  includePaths: [
+    path.dirname(require.resolve(&#39;typey&#39;))
+  ]
+}, function(err, result) { /<em>...</em>/ });</p>
+<pre><code>
+## Using with libSass
+
+If you are using libSass but not using node-sass, you probably already know how to include 3rd party libraries into your Sass project.
+
+1. Copy these files to your Sass project.
+2. This fork-able version requires the [typey](https://github.com/jptaranto/typey) Sass module. Add typey&#39;s `stylesheets` directory to your libSass include paths in the &quot;usual way&quot;.
+
+## Using with Ruby Sass
+
+In addition to copying these files to your Sass project, you&#39;ll also need to:
+
+1. Edit your `Gemfile` file to add:
+
+ ```ruby
+gem &#39;typey&#39;, &#39;~&gt; 1.0.0&#39;
+</code></pre><ol>
+<li><p>If you use Compass, edit your <code>config.rb</code> file to add:</p>
+<pre><code class="lang-ruby">require &#39;typey&#39;
+</code></pre>
+</li>
+<li><p>Update your local Gems with:</p>
+<pre><code>bundle install
+</code></pre></li>
+</ol>
+
+      </body>
+    </html>
