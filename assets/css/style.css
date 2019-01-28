@@ -1164,8 +1164,8 @@ section {
   .btn-set .btn-accent {
     margin: 0; }
   .skills {
-    padding: 10px;
-    grid-gap: 10px;
+    padding: 20px;
+    grid-gap: 20px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr; }
   .about .container {
