@@ -1168,6 +1168,8 @@ section {
     grid-gap: 20px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr; }
+  .skills .btn-set {
+    padding: 0; }
   .about .container {
     grid-gap: 20px;
     -ms-grid-columns: 1fr;
